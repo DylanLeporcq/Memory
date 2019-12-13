@@ -22,6 +22,12 @@ body {
 
 }
 
+#interface {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #enter {
     background: black;
     border: 5px solid #0dc2b3;
@@ -58,10 +64,11 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    margin-left: 30%;
+    padding-left: 15px;
+    padding-right: 15px;
 
 }
-
-
 
 #coin {
     font-family: 'VT323', monospace;
@@ -121,7 +128,7 @@ body {
 }
 
 #name_bloc {
-    visibility: hidden;
+    display: none;
     border: 2px solid #f90059;
     border-radius: 10px;
     font-size: 43pt;
@@ -129,10 +136,10 @@ body {
     font-family: 'VT323', monospace;
     color: white;
     background: black;
-    display: flex;
     align-items: center;
     font-weight: bold;
     margin: 20px;
+    width: 30%;
 }
 #name {
     font-weight: initial;
@@ -143,29 +150,28 @@ body {
     margin-left: 10px;
 }
 #score_bloc {
-    visibility: hidden;
+    display: none;
     border: 2px solid #f90059;
     border-radius: 10px;
     font-size: 20pt;
     text-align: center;
     color: white;
     background: black;
-    display: flex;
     align-items: center;
     font-weight: bold;
-
+    width: 60%;
 }
 #timer_bloc {
-    visibility: hidden;
+    display: none;
     border: 2px solid #f90059;
     border-radius: 10px;
     font-size: 20pt;
     text-align: center;
     color: white;
     background: black;
-    display: flex;
     align-items: center;
     font-weight: bold;
+    width: 60%;
 }
 
 #begin {
@@ -208,6 +214,7 @@ body {
     justify-items: center;
     align-content: center;
     padding-top: 30px;
+    width: 30%;
 }
 
 #minutes {
@@ -246,48 +253,276 @@ body {
 }
 
 
-@media (max-width: 360px){
-    #game {
-        margin-top: 50px;
-    }
-    #card1, #card2, #card3, #card4, #card5, #card6, #card7, #card8, #card9, #card10, #card11, #card12, #card13, #card14, #card15, #card16 {
-        padding: 10px;
-        height: 3px;
-    }
-    #name_bloc {
-
-        border: 2px solid black;
-        border-radius: 10px;
-        font-size: 30pt;
-        text-align: center;
-        color: white;
-        background: #b43412;
-        display: flex;
-        align-items: center;
-        font-weight: bold;
-        margin: 20px;
-    }
-    #begin {
-        position: fixed;
-        left: 0vh;
-        font-size: 20pt;
-        margin-top: 0px;
-        padding: 10px;
-    }
-    #game {
-        margin-top: 0px;
+@media (max-width: 360px) {
+    #coin {
         display: none;
     }
-    #wrong {
-        position: fixed;
-        left: 0vh;
-        margin-top: -150px;
-        font-size: 50pt;
+    #title {
+        font-size: 60pt;
+        margin-left: 0%;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
     }
-    #right {
-        position: fixed;
-        left: 0vh;
-        margin-top: -150px;
-        font-size: 50pt;
+    #enter {
+        font-size: 20pt;
+    }
+    #place_name {
+        font-size: 30pt;
+    }
+    #interface {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #name_bloc {
+        font-size: 20pt;
+        margin: 0px;
+        width: 90%;
+        position: absolute;
+        padding-left: 30px;
+        top: 222px;
+    }
+    #score_bloc {
+        font-size: 20pt;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        margin-left: 10px;
+    }
+    #timer_bloc {
+        font-size: 20pt;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        height: 44px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #timer {
+        font-size: 16pt;
+    }
+    #stats {
+        flex-direction: row;
+        width: 100%;
+    }
+    #card1, #card2, #card3, #card4, #card5, #card6, #card7, #card8, #card9, #card10, #card11, #card12, #card13, #card14, #card15, #card16 {
+        height: 60px;
+        width: 40px;
+        margin: 1px;
+    }
+
+}
+
+@media (max-width: 321px) {
+
+    #score_bloc {
+        font-size: 14pt;
+        padding-left: 3px;
+    }
+    #timer_bloc {
+        font-size: 14pt;
+        padding-left: 3px;
+    }
+    #place_name {
+        font-size: 24pt;
+    }
+    #card1, #card2, #card3, #card4, #card5, #card6, #card7, #card8, #card9, #card10, #card11, #card12, #card13, #card14, #card15, #card16 {
+        height: 4px;
+        width: 2px;
+        margin: 1px;
+    }
+}
+
+@media (max-width: 375px) {
+    #coin {
+        display: none;
+    }
+    #title {
+        font-size: 60pt;
+        margin-left: 0%;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+    }
+    #enter {
+        font-size: 20pt;
+    }
+    #place_name {
+        font-size: 30pt;
+    }
+    #interface {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #name_bloc {
+        font-size: 20pt;
+        margin: 0px;
+        width: 90%;
+        position: absolute;
+        padding-left: 30px;
+        top: 222px;
+    }
+    #score_bloc {
+        font-size: 20pt;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        margin-left: 10px;
+    }
+    #timer_bloc {
+        font-size: 20pt;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        height: 44px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #timer {
+        font-size: 16pt;
+    }
+    #stats {
+        flex-direction: row;
+        width: 100%;
+    }
+    #card1, #card2, #card3, #card4, #card5, #card6, #card7, #card8, #card9, #card10, #card11, #card12, #card13, #card14, #card15, #card16 {
+        height: 60px;
+        width: 40px;
+        margin: 1px;
+    }
+
+}
+@media (max-width: 414px) {
+    #coin {
+        display: none;
+    }
+    #title {
+        font-size: 60pt;
+        margin-left: 0%;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+    }
+    #enter {
+        font-size: 20pt;
+    }
+    #place_name {
+        font-size: 30pt;
+    }
+    #interface {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #name_bloc {
+        font-size: 20pt;
+        margin: 0px;
+        width: 90%;
+        position: absolute;
+        padding-left: 30px;
+        top: 222px;
+    }
+    #score_bloc {
+        font-size: 20pt;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        margin-left: 10px;
+    }
+    #timer_bloc {
+        font-size: 20pt;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        height: 44px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #timer {
+        font-size: 16pt;
+    }
+    #stats {
+        flex-direction: row;
+        width: 100%;
+    }
+    #card1, #card2, #card3, #card4, #card5, #card6, #card7, #card8, #card9, #card10, #card11, #card12, #card13, #card14, #card15, #card16 {
+        height: 60px;
+        width: 40px;
+        margin: 1px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    #coin {
+        display: none;
+    }
+    #title {
+        font-size: 60pt;
+        margin-left: 0%;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+    }
+    #enter {
+        font-size: 20pt;
+    }
+    #place_name {
+        font-size: 30pt;
+    }
+    #interface {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #name_bloc {
+        font-size: 26pt;
+        margin: 0px;
+        width: 90%;
+        position: absolute;
+        padding-left: 30px;
+        top: 214px;
+    }
+    #score_bloc {
+        font-size: 26pt;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        margin-left: 10px;
+    }
+    #timer_bloc {
+        font-size: 26pt;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        height: 55px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #timer {
+        font-size: 16pt;
+    }
+    #stats {
+        flex-direction: row;
+        width: 100%;
+    }
+    #card1, #card2, #card3, #card4, #card5, #card6, #card7, #card8, #card9, #card10, #card11, #card12, #card13, #card14, #card15, #card16 {
+        height: 150px;
+        width: 110px;
+        margin: 15px;
+    }
+}
+
+@media (max-width: 1024px) {
+    #card1, #card2, #card3, #card4, #card5, #card6, #card7, #card8, #card9, #card10, #card11, #card12, #card13, #card14, #card15, #card16 {
+        height: 200px;
+        width: 170px;
+        margin: 22px;
     }
 }

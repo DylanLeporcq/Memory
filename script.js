@@ -66,7 +66,7 @@ function resetCardPic() {
 
 //when cards 'remain' = 0, the 'game' block disappear and the end menu appear
 function endGame() {
-    if (remain===0) {
+    if (remain===14) {
     clearTimeout(t);
     endStats();
     document.getElementById('end_zone').style.display='flex';
@@ -78,13 +78,14 @@ function endGame() {
 function enterName() {
     document.getElementById('name').innerHTML= " " + document.getElementById('place_name').value;
     document.getElementById('game').style.display='flex';
-    document.getElementById('timer_bloc').style.visibility='visible';
-    document.getElementById('name_bloc').style.visibility='visible';
-    document.getElementById('score_bloc').style.visibility='visible';
+    document.getElementById('timer_bloc').style.display='flex';
+    document.getElementById('name_bloc').style.display='flex';
+    document.getElementById('score_bloc').style.display='flex';
     document.getElementById('pseudo_zone').style.display='none';
     document.getElementById('place_name').style.display='none';
     document.getElementById('begin').style.display='none';
     document.getElementById('coin').style.display='none';
+    document.getElementById('title').style.marginLeft='0px';
     timeUp();
 }
 
