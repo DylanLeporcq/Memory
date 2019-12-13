@@ -1,7 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
+
+*{
+    font-family: 'VT323', monospace;
+}
+
+body {
+    background-image: url("pics/safari.jpg");
+    animation: defile 20s linear infinite;"
+}
+@keyframes defile {
+    0% { background-position-y:   0; }
+    100% { background-position-y: 100vw; }
+}
+
 #cache {
     background: rgba(0, 0, 0, 0);
     min-height: 100vh;
-    z-index: 1;
+    position: absolute;
+    width: 100%;
+    display: none;
+
+}
+
+#enter {
+    background: black;
+    border: 5px solid #0dc2b3;
+    border-radius: 3px;
+    color: #0dc2b3;
+    font-family: 'VT323', monospace;
+}
+#place_name {
+    background: black;
+    border: 5px solid #0dc2b3;
+    border-radius: 3px;
+    color: #0dc2b3;
+    font-family: 'VT323', monospace;
+    text-transform: uppercase;
 }
 
 .container-fluid {
@@ -11,29 +45,51 @@
 #game {
     margin-top: 50px;
     display: none;
+    align-items: center;
+    justify-content: center;
 }
 
 #title {
-    border: 2px solid black;
-    font-size: 35pt;
+    border: 2px solid white;
+    font-size: 60pt;
     color: white;
-    font-family: "Cooper Black";
-    background-image: url("pics/wpp.png");
+    font-family: 'VT323', monospace;
+    background-image: url("pics/wpp.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+}
+
+
+
+#coin {
+    font-family: 'VT323', monospace;
+    color: white;
+    animation: coin 1s infinite;
+    font-size: 30pt;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes coin{
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
 }
 
 #card1, #card2, #card3, #card4, #card5, #card6, #card7, #card8, #card9, #card10, #card11, #card12, #card13, #card14, #card15, #card16 {
     cursor: pointer;
-    padding: 10px;
-    border: 2px solid black;
+    padding: 40px;
+    border: 2px solid #0dc2b3;
     border-radius: 10px;
-    height: 78px;
+    height: 100px;
+    width: 80px;
+    margin: 10px;
 }
 
 #card1, #card2, #card3, #card4 {
-    background: #69070d;
+    background: black;
     background-image: url("pics/unknow.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -41,7 +97,7 @@
 }
 
 #card5, #card6, #card7, #card8 {
-    background: #a4240f;
+    background: black;
     background-image: url("pics/unknow.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -49,7 +105,7 @@
 }
 
 #card9, #card10, #card11, #card12 {
-    background: #c54714;
+    background: black;
     background-image: url("pics/unknow.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -57,60 +113,22 @@
 }
 
 #card13, #card14, #card15, #card16 {
-    background: #e4731a;
+    background: black;
     background-image: url("pics/unknow.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
 
-#table {
-    z-index: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-#wrong {
-    text-align: center;
-    position: fixed;
-    display: none;
-    left: 63vh;
-    font-size: 80pt;
-    margin-top: 100px;
-    color: #343434;
-    border: 5px solid black;
-    border-radius: 10px;
-    background: rgb(254,252,234);
-    background: -moz-radial-gradient(center, ellipse cover,  rgba(254,252,234,1) 0%, rgb(241, 33, 44) 100%);
-    background: -webkit-radial-gradient(center, ellipse cover,  rgba(254,252,234,1) 0%, rgb(241, 33, 44) 100%);
-    background: radial-gradient(ellipse at center,  rgba(254,252,234,1) 0%, rgb(241, 33, 44) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 );
-}
-#right {
-    text-align: center;
-    position: fixed;
-    left: 84vh;
-    font-size: 80pt;
-    margin-top: 100px;
-    color: #343434;
-    display: none;
-    border: 5px solid black;
-    border-radius: 10px;
-    background: rgb(254,252,234);
-    background: -moz-radial-gradient(center, ellipse cover,  rgba(254,252,234,1) 0%, rgba(241,218,54,1) 100%);
-    background: -webkit-radial-gradient(center, ellipse cover,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%);
-    background: radial-gradient(ellipse at center,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 );
-}
-
 #name_bloc {
     visibility: hidden;
-    border: 2px solid black;
+    border: 2px solid #f90059;
     border-radius: 10px;
-    font-size: 30pt;
+    font-size: 43pt;
     text-align: center;
+    font-family: 'VT323', monospace;
     color: white;
-    background: #b43412;
+    background: black;
     display: flex;
     align-items: center;
     font-weight: bold;
@@ -118,19 +136,20 @@
 }
 #name {
     font-weight: initial;
-    color: #dcdcdc;
+    color: #f90059;
     letter-spacing: 3px;
+    font-family: 'VT323', monospace;
+    text-transform: uppercase;
     margin-left: 10px;
-    font-size: 20pt;
 }
 #score_bloc {
     visibility: hidden;
-    border: 2px solid black;
+    border: 2px solid #f90059;
     border-radius: 10px;
     font-size: 20pt;
     text-align: center;
     color: white;
-    background: #b43412;
+    background: black;
     display: flex;
     align-items: center;
     font-weight: bold;
@@ -138,12 +157,12 @@
 }
 #timer_bloc {
     visibility: hidden;
-    border: 2px solid black;
+    border: 2px solid #f90059;
     border-radius: 10px;
     font-size: 20pt;
     text-align: center;
     color: white;
-    background: #b43412;
+    background: black;
     display: flex;
     align-items: center;
     font-weight: bold;
@@ -151,14 +170,18 @@
 
 #begin {
     border: 3px solid black;
+    display: flex;
     border-radius: 10px;
-    position: fixed;
-    left: 54vh;
+    flex-direction: row;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
     font-size: 40pt;
     margin-top: 100px;
+    margin-left: 0;
     text-align: center;
     padding: 20px;
-    background: #b43412;
+    background: #f90059;
 }
 
 #score {
@@ -200,26 +223,28 @@
 #end_zone{
     margin-top: 20px;
     display: none;
+    color: white;
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    background: #b43412;
-    border: 3px solid black;
+    background: #f90059;
+    border: 5px solid #0dc2b3;
     border-radius: 10px;
 }
 
 #classement {
     font-size: 20pt;
-    color: black;
+    color: white;
     padding: 30px;
-    background: white;
+    background: black;
 }
 
 #retry {
-    background: #282828;
+    background: #0dc2b3;
     color: white;
     font-size: 20pt;
 }
+
 
 @media (max-width: 360px){
     #game {
@@ -252,5 +277,17 @@
     #game {
         margin-top: 0px;
         display: none;
+    }
+    #wrong {
+        position: fixed;
+        left: 0vh;
+        margin-top: -150px;
+        font-size: 50pt;
+    }
+    #right {
+        position: fixed;
+        left: 0vh;
+        margin-top: -150px;
+        font-size: 50pt;
     }
 }

@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <title>Safari Memory</title>
+    <title>Retro Memory</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body style="background-image: url(pics/safari.jpg)">
-<div id="cache">
+<body>
+
     <!-- HEADER OG THE GAME (NAME, TITLE AND SCORE/TIMER -->
+    <div id="cache">S</div>
     <div class="container-fluid" id="interface">
         <div class="row">
             <!-- NAME OF PLAYER -->
             <div class="col-md" id="name_bloc">NAME : <span id="name"> </span></div>
             <!-- TITLE-->
-            <div class="col-md" id="title">SAFARI MEMORY</div>
+            <div class="col-md" id="title">RETRO MEMORY</div>
             <div class="col-md">
                 <div class="column" id="stats">
                     <!-- SCORE & TIMER -->
@@ -30,57 +31,50 @@
     </div>
 
     <!-- BODY OF THE GAME, CONTAIN THE PANEL 'FOUNDS ANIMALS' LEFT AND RIGHT, AND THE GAME -->
-    <button id="wrong" onclick="buttonSet()">Bad Move !</button>
-    <button id="right" onclick="buttonSet()">Nice !</button>
     <div id="begin">
         <span></span>
         <div id="pseudo_zone">
             <input type="text" id="place_name" placeholder="Enter your name" maxlength="8">
-            <input type="submit" value="Enter" onclick="enterName()">
+            <input id="enter" type="submit" value="Enter" onclick="enterName()">
         </div>
     </div>
+    <span id="coin">Insert coin here ...</span>
     <div id="end_zone">
-        <span style="color: white; font-size: 80pt">Jeu terminé</span>
+        <span style="color: white; font-size: 80pt">END OF THE GAME !</span>
         <span id="classement"></span>
         <input type="submit" id="retry" value="RETRY" onclick="retryGame()">
     </div>
-    <div class="container-fluid" id="game">
-        <div class="row">
+    <div id="game">
             <!-- GAME-->
-            <div class="col-md" id="table">
-                <div class="row">
+                <div id="firstline">
                     <!-- FIRST LINE-->
-                    <div class="col-sm" id="card1"></div>
-                    <div class="col-sm" id="card2"></div>
-                    <div class="col-sm" id="card3"></div>
-                    <div class="col-sm" id="card4"></div>
+                    <div id="card1"></div>
+                    <div id="card2"></div>
+                    <div id="card3"></div>
+                    <div id="card4"></div>
                 </div>
-                <div class="row">
+                <div id="secondline">
                     <!-- SECOND LINE-->
-                    <div class="col-sm" id="card5"></div>
-                    <div class="col-sm" id="card6"></div>
-                    <div class="col-sm" id="card7"></div>
-                    <div class="col-sm" id="card8"></div>
+                    <div id="card5"></div>
+                    <div id="card6"></div>
+                    <div id="card7"></div>
+                    <div id="card8"></div>
                 </div>
-                <div class="row">
+                <div id="thirdline">
                     <!--THIRD LINE-->
-                    <div class="col-sm" id="card9"></div>
-                    <div class="col-sm" id="card10"></div>
-                    <div class="col-sm" id="card11"></div>
-                    <div class="col-sm" id="card12"></div>
+                    <div id="card9"></div>
+                    <div id="card10"></div>
+                    <div id="card11"></div>
+                    <div id="card12"></div>
                 </div>
-                <div class="row">
+                <div id="lastline">
                     <!-- LAST LINE-->
-                    <div class="col-sm" id="card13"></div>
-                    <div class="col-sm" id="card14"></div>
-                    <div class="col-sm" id="card15"></div>
-                    <div class="col-sm" id="card16"></div>
+                    <div id="card13"></div>
+                    <div id="card14"></div>
+                    <div id="card15"></div>
+                    <div id="card16"></div>
                 </div>
-            </div>
-        </div>
-    </div>
 </div>
-
 <script src="script.js"></script>
 <script src="clicks.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

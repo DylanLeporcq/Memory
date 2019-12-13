@@ -27,6 +27,7 @@ randomCard();
 
 //when two cards are chosen, this function restart the click counter and check the result with the function
 function twoCardClicked() {
+    document.getElementById('cache').style.display="none";
     click=0;
     checkResult();
 }
@@ -39,20 +40,15 @@ function checkResult() {
         score=score+3;
         remain=remain-2;
         document.getElementById('score').innerHTML=score;
-        document.getElementById('cache').style.background='rgba(0, 0, 0, 0.33)';
-        document.getElementById('table').style.zIndex='-1';
-        document.getElementById('right').style.display='block';
         document.getElementById('card'+card1n).style.visibility='hidden';
         document.getElementById('card'+card2n).style.visibility='hidden';
+        endGame();
 
     } else {
         cardValue1=0;
         cardValue2=0;
         score--;
         document.getElementById('score').innerHTML=score;
-        document.getElementById('cache').style.background='rgba(0, 0, 0, 0.33)';
-        document.getElementById('table').style.zIndex='-1';
-        document.getElementById('wrong').style.display='block';
     }
     resetCardPic();
     document.getElementById('test').innerHTML=click;
@@ -67,14 +63,6 @@ function resetCardPic() {
     }
 }
 
-//last click on the 'Nice' button before win, redirect on the endGame function
-function buttonSet() {
-    document.getElementById('table').style.zIndex='0';
-    document.getElementById('cache').style.background='rgba(0, 0, 0, 0)';
-    document.getElementById('wrong').style.display='none';
-    document.getElementById('right').style.display='none';
-    endGame();
-}
 
 //when cards 'remain' = 0, the 'game' block disappear and the end menu appear
 function endGame() {
@@ -89,13 +77,14 @@ function endGame() {
 //enter the player's name
 function enterName() {
     document.getElementById('name').innerHTML= " " + document.getElementById('place_name').value;
-    document.getElementById('game').style.display='block';
+    document.getElementById('game').style.display='flex';
     document.getElementById('timer_bloc').style.visibility='visible';
     document.getElementById('name_bloc').style.visibility='visible';
     document.getElementById('score_bloc').style.visibility='visible';
     document.getElementById('pseudo_zone').style.display='none';
     document.getElementById('place_name').style.display='none';
     document.getElementById('begin').style.display='none';
+    document.getElementById('coin').style.display='none';
     timeUp();
 }
 
@@ -137,7 +126,7 @@ function retryGame() {
     motifsCards=[1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8];
     remainCard = motifsCards.slice(0);
     chosenCards=[];
-    document.getElementById('game').style.display='block';
+    document.getElementById('game').style.display='flex';
     document.getElementById('end_zone').style.display='none';
     s=0;
     m=0;
@@ -162,8 +151,8 @@ function checkCard() {
     resetCardPic();
     click=0}
     else {
-        setTimeout(twoCardClicked, 400);
-        document.getElementById('table').style.zIndex='-1';
+        document.getElementById('cache').style.display="block";
+        setTimeout(twoCardClicked, 1000);
         click=0
     }
 }
