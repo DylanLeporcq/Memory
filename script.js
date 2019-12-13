@@ -66,7 +66,7 @@ function resetCardPic() {
 
 //when cards 'remain' = 0, the 'game' block disappear and the end menu appear
 function endGame() {
-    if (remain===14) {
+    if (remain===0) {
     clearTimeout(t);
     endStats();
     document.getElementById('end_zone').style.display='flex';
