@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Safari Memory</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style="background-image: url(pics/safari.jpg)">
+<div id="cache">
+    <!-- HEADER OG THE GAME (NAME, TITLE AND SCORE/TIMER -->
+    <div class="container-fluid" id="interface">
+        <div class="row">
+            <!-- NAME OF PLAYER -->
+            <div class="col-md" id="name_bloc">NAME : <span id="name"> </span></div>
+            <!-- TITLE-->
+            <div class="col-md" id="title">SAFARI MEMORY</div>
+            <div class="col-md">
+                <div class="column" id="stats">
+                    <!-- SCORE & TIMER -->
+                    <div class="col-md" id="score_bloc">SCORE : <span id="score"></span></div>
+                    <div class="col-md" id="timer_bloc">TIME : <span id="timer">
+                        <p id="minutes">00</p> :
+                        <p id="seconds">00</p>
+                    </span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BODY OF THE GAME, CONTAIN THE PANEL 'FOUNDS ANIMALS' LEFT AND RIGHT, AND THE GAME -->
+    <button id="wrong" onclick="buttonSet()">Bad Move !</button>
+    <button id="right" onclick="buttonSet()">Nice !</button>
+    <div id="begin">
+        <span></span>
+        <div id="pseudo_zone">
+            <input type="text" id="place_name" placeholder="Enter your name" maxlength="8">
+            <input type="submit" value="Enter" onclick="enterName()">
+        </div>
+    </div>
+    <div id="end_zone">
+        <span style="color: white; font-size: 80pt">Jeu terminé</span>
+        <span id="classement"></span>
+        <input type="submit" id="retry" value="RETRY" onclick="retryGame()">
+    </div>
+    <div class="container-fluid" id="game">
+        <div class="row">
+            <!-- GAME-->
+            <div class="col-md" id="table">
+                <div class="row">
+                    <!-- FIRST LINE-->
+                    <div class="col-sm" id="card1"></div>
+                    <div class="col-sm" id="card2"></div>
+                    <div class="col-sm" id="card3"></div>
+                    <div class="col-sm" id="card4"></div>
+                </div>
+                <div class="row">
+                    <!-- SECOND LINE-->
+                    <div class="col-sm" id="card5"></div>
+                    <div class="col-sm" id="card6"></div>
+                    <div class="col-sm" id="card7"></div>
+                    <div class="col-sm" id="card8"></div>
+                </div>
+                <div class="row">
+                    <!--THIRD LINE-->
+                    <div class="col-sm" id="card9"></div>
+                    <div class="col-sm" id="card10"></div>
+                    <div class="col-sm" id="card11"></div>
+                    <div class="col-sm" id="card12"></div>
+                </div>
+                <div class="row">
+                    <!-- LAST LINE-->
+                    <div class="col-sm" id="card13"></div>
+                    <div class="col-sm" id="card14"></div>
+                    <div class="col-sm" id="card15"></div>
+                    <div class="col-sm" id="card16"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script src="clicks.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,256 @@
+#cache {
+    background: rgba(0, 0, 0, 0);
+    min-height: 100vh;
+    z-index: 1;
+}
+
+.container-fluid {
+    text-align: center;
+}
+
+#game {
+    margin-top: 50px;
+    display: none;
+}
+
+#title {
+    border: 2px solid black;
+    font-size: 35pt;
+    color: white;
+    font-family: "Cooper Black";
+    background-image: url("pics/wpp.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#card1, #card2, #card3, #card4, #card5, #card6, #card7, #card8, #card9, #card10, #card11, #card12, #card13, #card14, #card15, #card16 {
+    cursor: pointer;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 78px;
+}
+
+#card1, #card2, #card3, #card4 {
+    background: #69070d;
+    background-image: url("pics/unknow.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#card5, #card6, #card7, #card8 {
+    background: #a4240f;
+    background-image: url("pics/unknow.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#card9, #card10, #card11, #card12 {
+    background: #c54714;
+    background-image: url("pics/unknow.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#card13, #card14, #card15, #card16 {
+    background: #e4731a;
+    background-image: url("pics/unknow.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#table {
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#wrong {
+    text-align: center;
+    position: fixed;
+    display: none;
+    left: 63vh;
+    font-size: 80pt;
+    margin-top: 100px;
+    color: #343434;
+    border: 5px solid black;
+    border-radius: 10px;
+    background: rgb(254,252,234);
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(254,252,234,1) 0%, rgb(241, 33, 44) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(254,252,234,1) 0%, rgb(241, 33, 44) 100%);
+    background: radial-gradient(ellipse at center,  rgba(254,252,234,1) 0%, rgb(241, 33, 44) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 );
+}
+#right {
+    text-align: center;
+    position: fixed;
+    left: 84vh;
+    font-size: 80pt;
+    margin-top: 100px;
+    color: #343434;
+    display: none;
+    border: 5px solid black;
+    border-radius: 10px;
+    background: rgb(254,252,234);
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(254,252,234,1) 0%, rgba(241,218,54,1) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%);
+    background: radial-gradient(ellipse at center,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 );
+}
+
+#name_bloc {
+    visibility: hidden;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 30pt;
+    text-align: center;
+    color: white;
+    background: #b43412;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin: 20px;
+}
+#name {
+    font-weight: initial;
+    color: #dcdcdc;
+    letter-spacing: 3px;
+    margin-left: 10px;
+    font-size: 20pt;
+}
+#score_bloc {
+    visibility: hidden;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 20pt;
+    text-align: center;
+    color: white;
+    background: #b43412;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+
+}
+#timer_bloc {
+    visibility: hidden;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 20pt;
+    text-align: center;
+    color: white;
+    background: #b43412;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+#begin {
+    border: 3px solid black;
+    border-radius: 10px;
+    position: fixed;
+    left: 54vh;
+    font-size: 40pt;
+    margin-top: 100px;
+    text-align: center;
+    padding: 20px;
+    background: #b43412;
+}
+
+#score {
+    font-weight: initial;
+    color: #dcdcdc;
+    letter-spacing: 3px;
+    margin-left: 10px;
+    font-size: 20pt;
+}
+
+#timer {
+    font-weight: initial;
+    color: #dcdcdc;
+    letter-spacing: 3px;
+    margin-left: 10px;
+    font-size: 20pt;
+}
+
+#stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    padding-top: 30px;
+}
+
+#minutes {
+    display: inline-block;
+    padding-top: 16px;
+}
+#seconds {
+    display: inline-block;
+    padding-top: 16px;
+}
+
+
+#end_zone{
+    margin-top: 20px;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background: #b43412;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+#classement {
+    font-size: 20pt;
+    color: black;
+    padding: 30px;
+    background: white;
+}
+
+#retry {
+    background: #282828;
+    color: white;
+    font-size: 20pt;
+}
+
+@media (max-width: 360px){
+    #game {
+        margin-top: 50px;
+    }
+    #card1, #card2, #card3, #card4, #card5, #card6, #card7, #card8, #card9, #card10, #card11, #card12, #card13, #card14, #card15, #card16 {
+        padding: 10px;
+        height: 3px;
+    }
+    #name_bloc {
+
+        border: 2px solid black;
+        border-radius: 10px;
+        font-size: 30pt;
+        text-align: center;
+        color: white;
+        background: #b43412;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        margin: 20px;
+    }
+    #begin {
+        position: fixed;
+        left: 0vh;
+        font-size: 20pt;
+        margin-top: 0px;
+        padding: 10px;
+    }
+    #game {
+        margin-top: 0px;
+        display: none;
+    }
+}
