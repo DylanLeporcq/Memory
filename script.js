@@ -2,6 +2,7 @@
 let motifsCards=[1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8];
 let remainCard = motifsCards.slice(0);
 let chosenCards=[];
+let music = document.getElementById('song');
 
 // Action (click = obtain +1 on each card click, it's reset when 2 cards has been discovered)
 score=0;
@@ -17,8 +18,17 @@ card2n = 0;
 //number of cards remain, -2 after a good answer
 remain = 16;
 
+
+
+function musicPlay() {
+    t = setTimeout(musicPlay, 1000);
+    music.play();
+}
+
+
 //Random card value function (between 1 and 8, delete each value after push it)
 function randomCard() {
+    musicPlay();
     while  (chosenCards.length<16) chosenCards.push(remainCard.splice(Math.floor(Math.random()*remainCard.length),1)[0]);
 }
 
