@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
+
+*{
+    font-family: 'VT323', monospace;
+}
+
+body {
+    background-image: url("pics/safari.png");
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    animation: defile 24s linear infinite;"
+}
+@keyframes defile {
+    0% { background-position-y:   0; }
+    100% { background-position-y: 100vh; }
+}
+
+#cache {
+    background: rgba(0, 0, 0, 0);
+    min-height: 100vh;
+    position: absolute;
+    width: 100%;
+    display: none;
+
+}
+
+#interface {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#enter {
+    background: white;
+    border: 5px solid black;
+    border-radius: 3px;
+    color: black;
+    font-family: 'VT323', monospace;
+}
+#place_name {
+    background: white;
+    border: 5px solid black;
+    border-radius: 3px;
+    color: black;
+    font-family: 'VT323', monospace;
+    text-transform: uppercase;
+}
+
+.container-fluid {
+    text-align: center;
+}
+
+#game {
+    margin-top: 50px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#title {
+    border: 2px solid #2a2a2a;
+    font-size: 60pt;
+    color: #2a2a2a;
+    font-family: 'VT323', monospace;
+    background-image: url("pics/wpp.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: 30%;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+#coin {
+    font-family: 'VT323', monospace;
+    color: black;
+    animation: coin 1s infinite;
+    font-size: 30pt;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes coin{
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+#card1, #card2, #card3, #card4, #card5, #card6, #card7, #card8, #card9, #card10, #card11, #card12, #card13, #card14, #card15, #card16 {
+    cursor: pointer;
+    padding: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 100px;
+    width: 80px;
+    margin: 10px;
+}
+
+#card1, #card2, #card3, #card4 {
+    background: #aeb39d;
+    background-image: url("pics/unknow.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#card5, #card6, #card7, #card8 {
+    background: #aeb39d;
+    background-image: url("pics/unknow.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#card9, #card10, #card11, #card12 {
+    background: #aeb39d;
+    background-image: url("pics/unknow.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#card13, #card14, #card15, #card16 {
+    background: #aeb39d;
+    background-image: url("pics/unknow.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#name_bloc {
+    display: none;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 43pt;
+    text-align: center;
+    font-family: 'VT323', monospace;
+    color: black;
+    background: #aeb39d;
+    align-items: center;
+    font-weight: bold;
+    margin: 20px;
+    width: 30%;
+}
+#name {
+    font-weight: initial;
+    color: black;
+    letter-spacing: 3px;
+    font-family: 'VT323', monospace;
+    text-transform: uppercase;
+    margin-left: 10px;
+}
+#score_bloc {
+    display: none;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 20pt;
+    text-align: center;
+    color: black;
+    background: #aeb39d;
+    align-items: center;
+    font-weight: bold;
+    width: 60%;
+}
+#timer_bloc {
+    display: none;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 20pt;
+    text-align: center;
+    color: black;
+    background: #aeb39d;
+    align-items: center;
+    font-weight: bold;
+    width: 60%;
+}
+
+#begin {
+    border: 3px solid black;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: row;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 40pt;
+    margin-top: 100px;
+    margin-left: 0;
+    text-align: center;
+    padding: 20px;
+    background: #aeb39d;
+}
+
+#score {
+    font-weight: initial;
+    color: black;
+    letter-spacing: 3px;
+    margin-left: 10px;
+    font-size: 20pt;
+}
+
+#timer {
+    font-weight: initial;
+    color: black;
+    letter-spacing: 3px;
+    margin-left: 10px;
+    font-size: 20pt;
+}
+
+#stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    padding-top: 30px;
+    width: 30%;
+}
+
+#minutes {
+    display: inline-block;
+    padding-top: 16px;
+}
+#seconds {
+    display: inline-block;
+    padding-top: 16px;
+}
+
+
+#end_zone{
+    margin-top: 20px;
+    display: none;
+    color: black;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background: #aeb39d;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+#classement {
+    font-size: 20pt;
+    color: black;
+    padding: 30px;
+    background: white;
+}
+
+#retry {
+    background: #aeb39d;
+    color: black;
+    font-size: 20pt;
+}
+
+#title_end {
+    color: white;
+    font-size: 80pt
+}
+
+#theme {
+    display : inline-block;
+    background: #aeb39d;
+    color: black;
+    font-size: 20pt;
+    position: absolute;
+    bottom: 0;
+}

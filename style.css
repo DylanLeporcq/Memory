@@ -256,5 +256,11 @@ body {
     color: white;
     font-size: 80pt
 }
-
-
+#theme {
+    display : inline-block;
+    background: #0dc2b3;
+    color: white;
+    font-size: 20pt;
+    position: absolute;
+    bottom: 0;
+}

@@ -81,6 +81,7 @@ function endGame() {
     endStats();
     document.getElementById('end_zone').style.display='flex';
     document.getElementById('game').style.display='none';
+    document.getElementById('theme').style.display='none';
     }
 }
 
@@ -139,6 +140,7 @@ function retryGame() {
     chosenCards=[];
     document.getElementById('game').style.display='flex';
     document.getElementById('end_zone').style.display='none';
+    document.getElementById('theme').style.display='inline-block';
     s=0;
     m=0;
     score=0;
@@ -159,6 +161,8 @@ function retryGame() {
 function checkCard() {
     if (card1n === card2n){
         alert('Please, choose two different cards.');
+        score--;
+        document.getElementById('score').innerHTML=score;
     resetCardPic();
     click=0}
     else {

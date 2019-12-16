@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Retro Memory</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="MQuery.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<audio autoplay="autoplay" loop="loop" id="song">
+    <source src="song.mp3" type="audio/mp3"/>
+</audio>
+    <!-- HEADER OG THE GAME (NAME, TITLE AND SCORE/TIMER -->
+    <div id="cache">S</div>
+    <div id="interface">
+            <!-- NAME OF PLAYER -->
+            <div id="name_bloc">NAME : <span id="name"> </span></div>
+            <!-- TITLE-->
+            <div id="title">POKEMON MEMORY</div>
+                <div id="stats">
+                    <!-- SCORE & TIMER -->
+                    <div id="score_bloc">SCORE : <span id="score"></span></div>
+                    <div id="timer_bloc">TIME : <span id="timer">
+                        <p id="minutes">00</p> :
+                        <p id="seconds">00</p>
+                    </span></div>
+                </div>
+    </div>
+    <!-- BODY OF THE GAME, CONTAIN THE PANEL 'FOUNDS ANIMALS' LEFT AND RIGHT, AND THE GAME -->
+    <div id="begin">
+        <span></span>
+        <div id="pseudo_zone">
+            <input type="text" id="place_name" placeholder="Enter your name" maxlength="8">
+            <input id="enter" type="submit" value="Enter" onclick="enterName()">
+        </div>
+    </div>
+    <span id="coin">Insert coin here ...</span>
+    <div id="end_zone">
+        <span id="title_end">END OF THE GAME !</span>
+        <span id="classement"></span>
+        <input type="submit" id="retry" value="RETRY" onclick="retryGame()">
+    </div>
+    <div id="game">
+            <!-- GAME-->
+                <div id="firstline">
+                    <!-- FIRST LINE-->
+                    <div id="card1"></div>
+                    <div id="card2"></div>
+                    <div id="card3"></div>
+                    <div id="card4"></div>
+                </div>
+                <div id="secondline">
+                    <!-- SECOND LINE-->
+                    <div id="card5"></div>
+                    <div id="card6"></div>
+                    <div id="card7"></div>
+                    <div id="card8"></div>
+                </div>
+                <div id="thirdline">
+                    <!--THIRD LINE-->
+                    <div id="card9"></div>
+                    <div id="card10"></div>
+                    <div id="card11"></div>
+                    <div id="card12"></div>
+                </div>
+                <div id="lastline">
+                    <!-- LAST LINE-->
+                    <div id="card13"></div>
+                    <div id="card14"></div>
+                    <div id="card15"></div>
+                    <div id="card16"></div>
+                </div>
+</div>
+
+<a href="../index.html"><input id="theme" type="submit" value="Change theme"></a>
+<script src="script.js"></script>
+<script src="clicks.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
